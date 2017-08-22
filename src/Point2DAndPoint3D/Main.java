@@ -1,7 +1,10 @@
 package Point2DAndPoint3D;
 
-/**
- * Created by RENT on 2017-08-22.
- */
+
 public class Main {
+    public static void main(String[] args) {
+        Point3D trzyD = new Point3D();
+        System.out.println(trzyD);
+    }
 }
+
