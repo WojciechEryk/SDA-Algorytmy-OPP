@@ -4,7 +4,7 @@ package Circle;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class CircleTest {
+public class CircleTests {
 
     @Test
     public void checkGetRadius(){
