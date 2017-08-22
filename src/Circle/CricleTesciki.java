@@ -1,11 +1,9 @@
 package Circle;
 
-
 import org.junit.Assert;
 import org.junit.Test;
 
-public class CircleTests {
-
+public class CricleTesciki {
     @Test
     public void checkGetRadius(){
         Circle cos3 = new Circle();
