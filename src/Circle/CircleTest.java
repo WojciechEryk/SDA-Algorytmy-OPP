@@ -5,10 +5,12 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class CircleTest {
-    Circle cos3 = new Circle();
+    Circle podstawowy = new Circle();
 
 @Test
     public void checkGetRadius(){
-    Assert.assertEquals(1, cos3.getRadius());
+    Assert.assertEquals(1.0, podstawowy.getRadius(),0.1);
 }
+
+
 }
