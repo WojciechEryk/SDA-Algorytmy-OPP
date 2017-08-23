@@ -1,9 +1,9 @@
-package ShapeGeometricFigure;
+package ShapePolimorfizm;
 
 
-public class Shape {
-    private String _color = "red";
-    private boolean _filled =true;
+public abstract class Shape {
+    protected String _color = "red";
+    protected boolean _filled =true;
 
     public Shape(){}
     public Shape(String color, boolean filled){
@@ -29,4 +29,8 @@ public class Shape {
             sb.append("not filled.");
         return sb.toString();
     }
+
+    public abstract double getArea();
+    public abstract double getPermiter();
+
 }

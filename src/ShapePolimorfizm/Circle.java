@@ -1,7 +1,7 @@
-package ShapeGeometricFigure;
+package ShapePolimorfizm;
 
 class Circle extends Shape{
-    private double _radius = 1.0;
+    protected double _radius = 1.0;
 
 
     //Konstruktory//
@@ -23,6 +23,12 @@ class Circle extends Shape{
     public double getArea(){
         return Math.PI*Math.pow(_radius,2d);
     }
+
+    @Override
+    public double getPermiter() {
+        return 2*Math.PI*_radius;
+    }
+
     public double getPertmiter(){
         return Math.PI*2*_radius;
     }

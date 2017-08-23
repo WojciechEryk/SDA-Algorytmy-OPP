@@ -1,8 +1,8 @@
-package ShapeGeometricFigure;
+package ShapePolimorfizm;
 
 public class Rectangle extends Shape{
-    private double _width = 1.0;
-    private double _length = 1.0;
+    protected double _width = 1.0;
+    protected double _length = 1.0;
 
 
     //Konstruktory//
@@ -26,6 +26,12 @@ public class Rectangle extends Shape{
     public double getArea(){
         return _length*_width;
     }
+
+    @Override
+    public double getPermiter() {
+        return _length*2+_width*2;
+    }
+
     public double getPerimiter(){
         return 2*_length+2*_width;
     }

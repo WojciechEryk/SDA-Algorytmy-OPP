@@ -1,7 +1,7 @@
-package ShapeGeometricFigure;
+package ShapePolimorfizm;
 
 
-public class Square extends ShapeGeometricFigure.Rectangle{
+public class Square extends Rectangle {
     Square(){}
     Square(double side){
        super(side,side);}
