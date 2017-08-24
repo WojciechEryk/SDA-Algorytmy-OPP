@@ -35,8 +35,11 @@ public abstract class Book implements IProduct{
     public String getAuthor(){
         return _author;
     }
-    public void setAuthor(){
-        _author=_author;
+    public void setAuthor(String author){
+        _author=author;
+    }
+    public String toString(){
+        return String.format("[Product Name=%s, Author=%s, Title=%s, Price=%d]", _name,_author,_title,_price);
     }
 
 }

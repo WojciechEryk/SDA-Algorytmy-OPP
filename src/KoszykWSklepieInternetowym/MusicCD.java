@@ -38,4 +38,7 @@ public abstract class MusicCD implements IProduct {
     public void setPerformer(String performer){
         _performer=performer;
     }
+    public String toString (){
+        return String.format("[Product Name=%s, Performer=%s, Title=%s, Price=%d]", _name,_performer,_title,_price);
+    }
 }
