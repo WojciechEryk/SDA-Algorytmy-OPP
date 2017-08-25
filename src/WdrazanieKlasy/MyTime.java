@@ -1,7 +1,5 @@
 package WdrazanieKlasy;
 
-import sun.security.mscapi.KeyStore;
-
 public class MyTime {
     private int _hour = 0;
     private int _minute = 0;
@@ -56,8 +54,11 @@ public class MyTime {
                 +String.format(_second<10&&_second>-1 ? "0%d" : "%d", _second);
     }
 
+    //Dobrze wymyślone :P ale muszę to dopisać dla minut i sekund. Miłego weekendu!
     public MyTime nextHour(MyTime time){
-//        return time.setHour(+1);
+        int next = time.getHour();
+        setHour(next+1);
+        return time;
     }
 
 
