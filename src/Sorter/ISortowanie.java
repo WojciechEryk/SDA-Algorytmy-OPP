@@ -1,6 +1,7 @@
 package Sorter;
 
 
-public interface ISortowanie {
-    public void sortuj();
+ interface ISortowanie {
+     int[] sortuj(int[] sortowanie);
 }
+
