@@ -24,9 +24,10 @@ public class WarunkiBiezace implements IWyswietlElement, Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        _cisnienie=cisnienie;
-        _temp=temp;
-        _wilgotnosc=wilgotnosc;
+        if (o instanceof DanePogodowe)
+        _cisnienie=((DanePogodowe) o).getCisnienie();
+        _temp=((DanePogodowe) o).getCisnienie();
+        _wilgotnosc=((DanePogodowe) o).getWilgotnosc();
         wyswietl();
         System.out.println();
     }
