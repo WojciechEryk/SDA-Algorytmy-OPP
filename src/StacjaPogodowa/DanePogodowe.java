@@ -1,8 +1,5 @@
 package StacjaPogodowa;
 
-
-import ZabawyZInterfejsem.IPojazd;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,35 +7,39 @@ public class DanePogodowe implements IPodmiot {
 
     //deklaracja zmiennych obiektowych
     private List<IObserwator> obserwatorzy;
-    private float temp;
-    private float cisnienie;
-    private float wilgotnosc;
+    private float _temp;
+    private float _cisnienie;
+    private float _wilgotnosc;
 
+    //konstruktor
     public DanePogodowe(){
-        obserwatorzy = new ArrayList<>(100);
+        obserwatorzy = new ArrayList<>();
     }
 
-    public void odczytyZmiennych() {
-        float temp = pobierzTemperature();
-        float wilgotnosc = pobierzWilgotnosc();
-        float cisnienie = pobierzCisnienie();
-
+    public void odczytyZmiennych(){
+        powiadomObserwatorow();
     }
 
     @Override
-    public void zarejestrujObserwatora(IObserwator o) {
-        obserwatorzy.add(o);
+    public void zarejestrujObserwatora(IObserwator obserwator) {
+        obserwatorzy.add(obserwator);
     }
 
     @Override
-    public void usunObserwatora(IObserwator o) {
-        obserwatorzy.remove(o);
+    public void usunObserwatora(IObserwator obserwator) {
+        obserwatorzy.remove(obserwator);
     }
 
     @Override
     public void powiadomObserwatorow() {
         for (IObserwator obserwator: obserwatorzy){
-            obserwator.aktualizacja(temp,wilgotnosc,cisnienie);
+            obserwator.aktualizacja(_temp,_wilgotnosc,_cisnienie);
         }
+    }
+    public void ustawZmienne(float temp, float cisnienie, float wilgotnosc) {
+        _temp = temp;
+        _wilgotnosc=wilgotnosc;
+        _cisnienie=cisnienie;
+        odczytyZmiennych();
     }
 }
