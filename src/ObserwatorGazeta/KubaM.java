@@ -12,7 +12,7 @@ public class KubaM implements IOdbiorcaObserwator {
 
     @Override
     public void odbierzGazete(String numer) {
-        System.out.printf("Hurra! Jest nowy numer %s gazety!", numer);
+        System.out.printf("Hurra! Jest nowy numer %s gazety!\n", numer);
     }
 
     public void rezygnujZGazety(){

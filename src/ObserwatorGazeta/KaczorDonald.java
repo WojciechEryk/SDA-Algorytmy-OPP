@@ -7,6 +7,10 @@ public class KaczorDonald implements IPodmiotWydawca {
     private ArrayList<IOdbiorcaObserwator> _odbiorcy;
     private String _numer;
 
+    public KaczorDonald() {
+        _odbiorcy = new ArrayList<>();
+    }
+
     @Override
     public void dodajPrenumeratora(IOdbiorcaObserwator prenumerator) {
         _odbiorcy.add(prenumerator);

@@ -5,7 +5,11 @@ import java.util.ArrayList;
 
 public class Fakt implements IPodmiotWydawca {
 
-        private ArrayList<IOdbiorcaObserwator> _odbiorcy;
+    public Fakt() {
+        _odbiorcy = new ArrayList<>();
+    }
+
+    private ArrayList<IOdbiorcaObserwator> _odbiorcy;
         private String _numer;
 
         @Override
