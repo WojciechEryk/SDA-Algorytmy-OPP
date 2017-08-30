@@ -4,11 +4,10 @@ package KawiarniaDekorator;
 public class StarCafeSpecial extends Napoj {
     @Override
     public double koszt() {
-        return 18.30;
+        return 0.89;
     }
 
-    @Override
-    public String UstawOpis(String opis) {
-        return "Espresso";
+    public String StarCafeSpecial() {
+        return "StarCafeSpecial";
     }
 }

@@ -3,12 +3,10 @@ package KawiarniaDekorator;
 public class MocnoPalona extends Napoj {
     @Override
     public double koszt() {
-        return 9.99;
+        return 0.99;
     }
 
-
-    @Override
-    public void UstawOpis(String opis) {
+    public MocnoPalona() {
         this.opis = "Mocno palona";
     }
 }

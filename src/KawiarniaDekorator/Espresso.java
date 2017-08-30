@@ -4,11 +4,11 @@ package KawiarniaDekorator;
 public class Espresso extends Napoj{
     @Override
     public double koszt() {
-        return 18.30;
+        return 1.99;
     }
 
-    @Override
-    public void UstawOpis(String opis) {
+
+    public Espresso() {
          this.opis = "Espresso";
     }
 }
