@@ -1,7 +1,31 @@
 package ObserwatorGazeta;
 
-/**
- * Created by RENT on 2017-08-30.
- */
-public class KaczorDonald {
+
+import java.util.ArrayList;
+
+public class KaczorDonald implements IPodmiotWydawca {
+    private ArrayList<IOdbiorcaObserwator> _odbiorcy;
+    private String _numer;
+
+    @Override
+    public void dodajPrenumeratora(IOdbiorcaObserwator prenumerator) {
+        _odbiorcy.add(prenumerator);
+    }
+
+    @Override
+    public void usunPrenumeratora(IOdbiorcaObserwator prenumerator) {
+        _odbiorcy.remove(prenumerator);
+    }
+
+    @Override
+    public void wyslijNowyNumer() {
+        for (IOdbiorcaObserwator odbiorca :_odbiorcy) {
+            odbiorca.odbierzGazete(_numer);
+        }
+    }
+
+    public void wydajNumer(String numer){
+        _numer = numer;
+        wyslijNowyNumer();
+    }
 }
