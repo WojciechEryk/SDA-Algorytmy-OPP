@@ -8,11 +8,11 @@ public class SortowanieBabelkowe implements ISortowanie {
 
         for (int i =0; i<sortowanie.length;i++){
             for (int j=0; j<sortowanie.length-1;j++){
-                if (sortowanie[i] <= sortowanie[j]){
+                if (sortowanie[j] > sortowanie[j+1]){
                     //SWAP
-                    int temp =sortowanie[i];
-                    sortowanie[j]=sortowanie[i];
-                    sortowanie[j]=temp;
+                    int temp =sortowanie[j];
+                    sortowanie[j]=sortowanie[j+1];
+                    sortowanie[j+1]=temp;
 
                 }
             }
