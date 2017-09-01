@@ -1,6 +1,6 @@
 package AdapterKapsulkiKawy;
 
 
-public interface DolceGusto {
+public interface IDolceGusto {
     void PysznaKawaOdNescafe();
 }

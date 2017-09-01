@@ -3,14 +3,14 @@ package AdapterKapsulkiKawy;
 
 public class AdapterDolceGustoToTassimo implements Tassimo {
 
-    private DolceGusto _dolceGusto;
+    private IDolceGusto _I_dolceGusto;
 
-    public AdapterDolceGustoToTassimo(DolceGusto dolceGusto) {
-        _dolceGusto = dolceGusto;
+    public AdapterDolceGustoToTassimo(IDolceGusto IDolceGusto) {
+        _I_dolceGusto = IDolceGusto;
     }
 
     @Override
     public void pysznaKawkaOdBosha() {
-       _dolceGusto.PysznaKawaOdNescafe();
+       _I_dolceGusto.PysznaKawaOdNescafe();
     }
 }

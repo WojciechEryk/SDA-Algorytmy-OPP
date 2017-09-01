@@ -1,10 +1,10 @@
 package AdapterKapsulkiKawy;
 
 
-public class AdapterTassimoToDolceGusto implements DolceGusto{
+public class AdapterTassimoToIDolceGusto implements IDolceGusto {
     Tassimo _tassimo;
 
-    public AdapterTassimoToDolceGusto(Tassimo tassimo) {
+    public AdapterTassimoToIDolceGusto(Tassimo tassimo) {
        _tassimo = tassimo;
     }
 

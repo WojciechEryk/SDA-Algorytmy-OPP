@@ -6,12 +6,12 @@ import java.util.ArrayList;
 public class Main{
     public static void main(String[] args) {
 
-        KawaDolceGusto dg = new KawaDolceGusto();
-        KawaDolceGusto dg2 = new KawaDolceGusto();
+        KawaIDolceGusto dg = new KawaIDolceGusto();
+        KawaIDolceGusto dg2 = new KawaIDolceGusto();
         KawaTassimo kt = new KawaTassimo();
         KawaTassimo kt2 = new KawaTassimo();
         AdapterDolceGustoToTassimo adapterB = new AdapterDolceGustoToTassimo(dg);
-        AdapterTassimoToDolceGusto adapterT = new AdapterTassimoToDolceGusto(kt2);
+        AdapterTassimoToIDolceGusto adapterT = new AdapterTassimoToIDolceGusto(kt2);
 
 
 
@@ -19,12 +19,12 @@ public class Main{
         list.add(adapterB);
         list.add(kt);
 
-        ArrayList<DolceGusto> list2= new ArrayList<>();
+        ArrayList<IDolceGusto> list2= new ArrayList<>();
         list2.add(adapterT);
         list2.add(dg2);
 
-        for (DolceGusto dolceGusto :list2) {
-            dolceGusto.PysznaKawaOdNescafe();
+        for (IDolceGusto IDolceGusto :list2) {
+            IDolceGusto.PysznaKawaOdNescafe();
         }
 
         System.out.println("\n--------------------------\n");
