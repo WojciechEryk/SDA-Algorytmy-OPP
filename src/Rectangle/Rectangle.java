@@ -1,8 +1,6 @@
 package Rectangle;
 
 
-import com.sun.org.apache.regexp.internal.RE;
-
 public class Rectangle {
     private float _length=1;
     private float _width=1;
