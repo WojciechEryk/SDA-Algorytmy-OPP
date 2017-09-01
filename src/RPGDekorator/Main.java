@@ -2,25 +2,32 @@ package RPGDekorator;
 
 public class Main {
     public static void main(String[] args) {
+
+//        Bohater eryk = new Bohater("Eryk",);
+
+        //Miecze
         DrewnianyMiecz dm = new DrewnianyMiecz();
         StalowyDragal sd = new StalowyDragal();
-        StalowyDragal sd2 = new StalowyDragal();
         SztywnaSmierc ss = new SztywnaSmierc();
+        JadSkurwola js = new JadSkurwola(sd);
+        Gowno go = new Gowno(js);
+        RunaPeknietegoSlonca rps = new RunaPeknietegoSlonca(go);
 
-        JadSkurwola js = new JadSkurwola(dm);
-        Gowno go = new Gowno(sd);
-        RunaPeknietegoSlonca rps = new RunaPeknietegoSlonca(ss);
-        JadSkurwola js2 = new JadSkurwola(sd2);
-        Gowno go2 = new Gowno(js2);
-        RunaPeknietegoSlonca rps2 = new RunaPeknietegoSlonca(go2);
+        //Tarcze
+        TarczaDrewniana td = new TarczaDrewniana();
+        TarczaHerbowa th = new TarczaHerbowa();
+        TarczaMigdalowa tm = new TarczaMigdalowa();
+        ObicieZKutaNapletesa oZKN = new ObicieZKutaNapletesa(tm);
+        RogZKutasorozca rZK = new RogZKutasorozca(oZKN);
+        FutroSkurwola fs = new FutroSkurwola(rZK);
 
-
-
-        System.out.printf("Miecz: %s :: Wartość ataku %.2f\n", js.pobierzOpis(),js.atak());
-        System.out.printf("Miecz: %s :: Wartość ataku %.2f\n", go.pobierzOpis(),go.atak());
-        System.out.printf("Miecz: %s :: Wartość ataku %.2f\n", rps.pobierzOpis(),rps.atak());
-        System.out.printf("Miecz: %s :: Wartość ataku %.2f\n", rps2.pobierzOpis(),rps2.atak());
-        System.out.println("----------------------------------------\n");
+        //Plecaki
+        MalyPlecak mp = new MalyPlecak();
+        SredniPlecak sp = new SredniPlecak();
+        DuzyPlecak dp = new DuzyPlecak();
+        NaszywkaNocnegoKochanka nnk = new NaszywkaNocnegoKochanka(sp);
+        DodatkowaKieszenZMoszny dkzm = new DodatkowaKieszenZMoszny(nnk);
+        DodatkowePaskiZJelit dpzj = new DodatkowePaskiZJelit(dkzm);
 
 
     }
