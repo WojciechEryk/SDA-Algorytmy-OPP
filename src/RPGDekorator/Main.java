@@ -3,8 +3,6 @@ package RPGDekorator;
 public class Main {
     public static void main(String[] args) {
 
-//        Bohater eryk = new Bohater("Eryk",);
-
         //Miecze
         DrewnianyMiecz dm = new DrewnianyMiecz();
         StalowyDragal sd = new StalowyDragal();
@@ -29,6 +27,6 @@ public class Main {
         DodatkowaKieszenZMoszny dkzm = new DodatkowaKieszenZMoszny(nnk);
         DodatkowePaskiZJelit dpzj = new DodatkowePaskiZJelit(dkzm);
 
-
+        Bohater eryk = new Bohater("Eryk", rps, fs, dpzj);
     }
 }
