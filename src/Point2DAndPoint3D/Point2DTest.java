@@ -35,9 +35,23 @@ public class Point2DTest {
         Assert.assertEquals(5, empty.getY(),0.1);
     }
     @Test
-    public void checkGetXYForDefaultConstruction(){
+    public void checkGetXAndYForDefaultConstruction(){
         Point2D empty = new Point2D();
         Assert.assertEquals(0, empty.getX(),0.1);
         Assert.assertEquals(0, empty.getY(),0.1);
+    }
+    @Test
+    public void checkGetXYForDefaultConstruction(){
+        Point2D empty = new Point2D();
+        float [] tab = new float[2];
+        Assert.assertArrayEquals(tab,empty.getXY(),0);
+    }
+    @Test
+    public void checkGetAndSetForXAndYForNotDefaultConstruction(){
+        Point2D notEmpty = new Point2D(24,51);
+        notEmpty.setX(42);
+        notEmpty.setY(15);
+        Assert.assertEquals(42, notEmpty.getX(),0.1);
+        Assert.assertEquals(15, notEmpty.getY(),0.1);
     }
 }
