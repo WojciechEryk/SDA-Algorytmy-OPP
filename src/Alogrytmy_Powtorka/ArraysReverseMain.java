@@ -1,7 +1,7 @@
-package Alogrytmy_Powtorka_OdwracanieTablicy;
+package Alogrytmy_Powtorka;
 
 
-public class ArraysReverse {
+public class ArraysReverseMain {
 
     public static void main(String[] args) {
 
