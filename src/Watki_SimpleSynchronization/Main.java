@@ -8,7 +8,7 @@ public synchronized void increment(){
 }
     public static void main(String[] args) throws InterruptedException {
         Main mm = new Main();
-        doWork();
+//        doWork();
         mm.doWork();
     }
     public static void doWork() throws InterruptedException {
@@ -16,7 +16,7 @@ public synchronized void increment(){
         Thread t1 = new Thread(new Runnable() {
             @Override
             public void run() {
-                for (int i = 0; i <100 ; i++) {
+                for (int i = 0; i <10 ; i++) {
                     System.out.println("A " + counter++);
                 }
             }
@@ -25,7 +25,7 @@ public synchronized void increment(){
         Thread t2 = new Thread(new Runnable() {
             @Override
             public void run() {
-                for (int i = 0; i <100 ; i++) {
+                for (int i = 0; i <10 ; i++) {
                     System.out.println("B " + counter++);
                 }
             }
@@ -35,6 +35,6 @@ public synchronized void increment(){
         t1.join();
         t2.join();
 
-        System.out.println(counter);
+        System.out.println("\n"+counter);
     }
 }
