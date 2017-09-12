@@ -43,5 +43,4 @@ public class Zadanie3 {
         System.out.println("Stosunek dodatnich do ujemnych: " + counterPlus/counterMinus);
 
     }
-
 }
